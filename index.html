@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal | AI-Powered Token Launcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">⬡</span>
+            <span class="brand-text">TERMINAL</span>
+        </div>
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#api">API</a>
+            <a href="https://x.com/terminalfunapp" target="_blank" class="nav-cta">@terminalfunapp</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">AUTONOMOUS LAUNCH INFRASTRUCTURE</div>
+            <h1>Launch tokens with a tweet.</h1>
+            <p class="hero-subtitle">Terminal is an AI-powered autonomous agent that deploys tokens on <a href="https://pump.fun" target="_blank">Pump.fun</a> via X mentions. No wallets. No UI. Just mention and launch.</p>
+            
+            <div class="hero-demo">
+                <div class="demo-tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar"></div>
+                        <div class="tweet-user">
+                            <span class="tweet-name">anon</span>
+                            <span class="tweet-handle">@degen_trader</span>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <span class="mention">@terminalfunapp</span> launch $CHAOS "pure entropy" with a glitchy robot pfp
+                    </div>
+                </div>
+                <div class="demo-arrow">→</div>
+                <div class="demo-result">
+                    <div class="result-icon">✓</div>
+                    <div class="result-text">
+                        <span class="result-label">TOKEN DEPLOYED</span>
+                        <span class="result-ca">Fk9j...x4Qp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="https://x.com/terminalfunapp" target="_blank" class="btn btn-primary">Try on X →</a>
+                <a href="#architecture" class="btn btn-secondary">View Architecture</a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">terminal.exe</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="prompt">$</span> listening for mentions...</div>
+                    <div class="terminal-line dim"><span class="timestamp">[21:27:03]</span> connected to X streaming API</div>
+                    <div class="terminal-line dim"><span class="timestamp">[21:27:03]</span> pump.fun RPC: ready</div>
+                    <div class="terminal-line dim"><span class="timestamp">[21:27:04]</span> image generation: online</div>
+                    <div class="terminal-line success"><span class="timestamp">[21:27:15]</span> mention detected → @degen_trader</div>
+                    <div class="terminal-line"><span class="prompt">$</span> parsing launch request...</div>
+                    <div class="terminal-line dim">   ticker: $CHAOS</div>
+                    <div class="terminal-line dim">   description: "pure entropy"</div>
+                    <div class="terminal-line dim">   image: generating...</div>
+                    <div class="terminal-line success"><span class="timestamp">[21:27:18]</span> image generated (1024x1024)</div>
+                    <div class="terminal-line"><span class="prompt">$</span> deploying to pump.fun...</div>
+                    <div class="terminal-line success"><span class="timestamp">[21:27:22]</span> ✓ TOKEN LIVE</div>
+                    <div class="terminal-line highlight">   CA: Fk9jR7xH2mNpQvL8sT3wY6zA4bC5dE1fG0hI9jK8x4Qp</div>
+                    <div class="terminal-line"><span class="prompt">$</span> replying to tweet...</div>
+                    <div class="terminal-line success"><span class="timestamp">[21:27:23]</span> ✓ reply posted</div>
+                    <div class="terminal-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From mention to mainnet in under 10 seconds.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Mention</h3>
+                        <p>Tweet at <span class="code">@terminalfunapp</span> with your token details: ticker, name, description, and optional image prompt.</p>
+                        <div class="step-example">
+                            <code>@terminalfunapp launch $TICKER "description" with [image prompt]</code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Parse</h3>
+                        <p>Our NLP engine extracts structured data from natural language. No rigid syntax required — Terminal understands context.</p>
+                        <div class="step-code">
+                            <pre>{
+  "ticker": "TICKER",
+  "name": "Token Name",
+  "description": "description",
+  "imagePrompt": "image prompt",
+  "creator": "0x..."
+}</pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Generate</h3>
+                        <p>AI generates token artwork based on your prompt. Custom models fine-tuned for crypto aesthetics, memes, and absurdist art.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Deploy</h3>
+                        <p>Token is deployed to Pump.fun's bonding curve. Fully on-chain, immutable, and instantly tradeable.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Reply</h3>
+                        <p>Terminal replies to your tweet with the contract address, pump.fun link, and generated artwork. Done.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Architecture</h2>
+            <p class="section-subtitle">Built for speed, reliability, and true autonomy.</p>
+            
+            <div class="arch-grid">
+                <div class="arch-card">
+                    <div class="arch-icon">🧠</div>
+                    <h3>AI Core</h3>
+                    <p>Powered by OpenClaw autonomous agent framework. Context-aware, multi-modal, and capable of complex reasoning.</p>
+                    <ul class="arch-specs">
+                        <li>LLM: Claude / GPT-4 class</li>
+                        <li>Vision: Multi-modal understanding</li>
+                        <li>Memory: Persistent context</li>
+                    </ul>
+                </div>
+                
+                <div class="arch-card">
+                    <div class="arch-icon">🎨</div>
+                    <h3>Image Generation</h3>
+                    <p>State-of-the-art diffusion models for token artwork. Fast generation with crypto-native style transfer.</p>
+                    <ul class="arch-specs">
+                        <li>Resolution: 1024x1024</li>
+                        <li>Latency: ~3 seconds</li>
+                        <li>Styles: Meme, glitch, pixel, realistic</li>
+                    </ul>
+                </div>
+                
+                <div class="arch-card">
+                    <div class="arch-icon">⚡</div>
+                    <h3>X Integration</h3>
+                    <p>Real-time streaming API connection. Sub-second mention detection with intelligent rate limiting.</p>
+                    <ul class="arch-specs">
+                        <li>Detection: &lt;1 second</li>
+                        <li>Filtering: Spam/abuse protection</li>
+                        <li>Threading: Context-aware replies</li>
+                    </ul>
+                </div>
+                
+                <div class="arch-card">
+                    <div class="arch-icon">🔗</div>
+                    <h3>Solana RPC</h3>
+                    <p>Direct integration with Pump.fun smart contracts. Priority fees and optimized transaction building.</p>
+                    <ul class="arch-specs">
+                        <li>Network: Solana Mainnet</li>
+                        <li>TPS: Priority lane</li>
+                        <li>Confirmation: ~400ms</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="arch-diagram">
+                <h3>System Flow</h3>
+                <div class="diagram">
+                    <div class="diagram-node">X Mention</div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">NLP Parser</div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">Image Gen</div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">Pump.fun TX</div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node">X Reply</div>
+                </div>
+                <div class="diagram-latency">End-to-end latency: <span class="highlight">&lt;10 seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="api" class="section">
+        <div class="container">
+            <h2 class="section-title">Command Syntax</h2>
+            <p class="section-subtitle">Flexible natural language parsing. These are guidelines, not requirements.</p>
+            
+            <div class="api-examples">
+                <div class="api-card">
+                    <h3>Basic Launch</h3>
+                    <code>@terminalfunapp launch $TICKER</code>
+                    <p>Launches with auto-generated name, description, and artwork.</p>
+                </div>
+                
+                <div class="api-card">
+                    <h3>With Description</h3>
+                    <code>@terminalfunapp launch $MOON "to the moon and beyond"</code>
+                    <p>Custom description, auto-generated artwork based on context.</p>
+                </div>
+                
+                <div class="api-card">
+                    <h3>Full Custom</h3>
+                    <code>@terminalfunapp launch $VOID "embrace the darkness" with a black hole consuming a city</code>
+                    <p>Full control over ticker, description, and image generation prompt.</p>
+                </div>
+                
+                <div class="api-card">
+                    <h3>Natural Language</h3>
+                    <code>@terminalfunapp can you make me a coin called $FROG about a frog wearing a suit</code>
+                    <p>Terminal understands conversational requests too.</p>
+                </div>
+            </div>
+            
+            <div class="api-note">
+                <strong>Note:</strong> All launches are subject to content filtering. Terminal will not deploy tokens with prohibited content, slurs, or impersonation attempts.
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Stats</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-value" data-target="0">0</div>
+                    <div class="stat-label">Tokens Launched</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">&lt;10s</div>
+                    <div class="stat-label">Avg Deploy Time</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Autonomous</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Ready to launch?</h2>
+            <p>Just tweet. Terminal handles the rest.</p>
+            <a href="https://x.com/terminalfunapp" target="_blank" class="btn btn-primary btn-large">@terminalfunapp →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-icon">⬡</span>
+                    <span class="brand-text">TERMINAL</span>
+                    <p>AI-powered token launcher on Pump.fun</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <a href="https://x.com/terminalfunapp" target="_blank">X / Twitter</a>
+                    <a href="https://pump.fun" target="_blank">Pump.fun</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Built With</h4>
+                    <a href="https://x.com/openclaw" target="_blank">OpenClaw</a>
+                    <a href="https://solana.com" target="_blank">Solana</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>No financial advice. Autonomous AI agent. Use at your own risk.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
